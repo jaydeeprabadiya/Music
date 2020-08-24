@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#1A607D8B" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/equalizer"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:tint="?attr/BackgroundTint"
+            android:background="@drawable/bar_selector_white"
+            android:src="@drawable/ic_equalizer"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#33607D8B" />
+
+
+        <ImageView
+            android:id="@+id/iv_music_add2playlist"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:tint="?attr/BackgroundTint"
+            android:background="@drawable/bar_selector_white"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:src="@drawable/ic_library_add_white_24dp"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <View
+            android:id="@+id/view_music_playlist"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#33607D8B"  />
+
+        <ImageView
+            android:id="@+id/iv_music_share"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:tint="?attr/BackgroundTint"
+            android:background="@drawable/bar_selector_white"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:src="@drawable/ic_share_white_24dp"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#33607D8B"  />
+
+        <ImageView
+            android:id="@+id/iv_music_download"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:tint="?attr/BackgroundTint"
+            android:background="@drawable/bar_selector_white"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:src="@drawable/ic_file_download"
+            android:visibility="gone"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <View
+            android:id="@+id/view_music_download"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#33607D8B"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_music_rate"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:tint="?attr/BackgroundTint"
+            android:background="@drawable/bar_selector_white"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:src="@drawable/ic_star_white_24dp"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#33607D8B"
+            />
+
+        <ImageView
+            android:id="@+id/bottombar_img_Favorite"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bar_selector_white"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:tint="?attr/BackgroundTint"
+            android:src="@drawable/selector_favorite"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#33607D8B"  />
+
+        <ImageView
+            android:id="@+id/iv_max_option"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:tint="?attr/BackgroundTint"
+            android:layout_weight="1"
+            android:background="@drawable/bar_selector_white"
+            android:clickable="true"
+            android:contentDescription="@string/image_content"
+            android:src="@drawable/ic_more_vert_white_24dp"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#33607D8B" />
+
+</LinearLayout>

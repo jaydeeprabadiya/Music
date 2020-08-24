@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:id="@+id/relativeLayout_close_rate_gialog"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:backgroundTint="?BackgroundColor_S"
+        android:background="@drawable/comment_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_subscribe"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:tint="?BackgroundTint"
+                        tools:ignore="ContentDescription" />
+                    <TextView
+                        android:textColor="?BackgroundTint"
+                        android:textStyle="bold"
+                        android:gravity="center|left"
+                        android:textSize="16sp"
+                        android:text="@string/premium_pack"
+                        android:layout_marginLeft="55dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:background="?Boder"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="?Titel_2"
+                android:padding="13dp"
+                android:text="@string/description_subsribte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:background="?Boder"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"/>
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_block"
+                app:tint="?BackgroundTint"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="@string/dialog_text_no_ads_title"
+                    android:textColor="?Titel_1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="@string/dialog_text_no_ads_description"
+                    android:textColor="?Titel_2"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:background="?Boder"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_smartphone"
+                    app:tint="?BackgroundTint"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="@string/playing_screen"
+                        android:textColor="?Titel_1"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="@string/now_playing_screen"
+                        android:textColor="?Titel_2"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/dialog_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/gradient_dialog_btn_go"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <TextView
+                    android:id="@+id/text_view_go_pro"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor">
+
+    <ProgressBar
+        android:id="@+id/progressBar_home"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="100dp"
+        android:visibility="gone"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/fl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/home_today"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_home_today"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/recyclerView_home_today"
+                                android:layout_alignBottom="@+id/recyclerView_home_today"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/abs_playlists"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/top_artist_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bg_round_cl"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:textAlignment="viewStart"
+                                fontPath="@string/sans_bold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingEnd="5dp"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="2dp"
+                                android:text="@string/artist"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="?attr/Titel_1"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:background="@drawable/card_home_text"
+                                android:backgroundTint="@color/colorAccent_Light"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="13dp"
+                                android:paddingStart="13dp"
+                                android:layout_marginEnd="10dp"
+                                android:id="@+id/tv_home_artist_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="@string/see_all"
+                                android:textColor="@color/background_Light"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_home_artist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/recyclerView_home_artist"
+                                android:layout_alignBottom="@+id/recyclerView_home_artist"
+                                android:layout_alignParentEnd="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textView_artist_empty"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="@string/no_data_found"
+                                android:textColor="?attr/BackgroundTint"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="?attr/Boder" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_trending"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bg_round_cl"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:textAlignment="viewStart"
+                                fontPath="@string/sans_bold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingEnd="5dp"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="2dp"
+                                android:text="@string/trending_songs"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="?attr/Titel_1"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:background="@drawable/card_home_text"
+                                android:backgroundTint="@color/colorAccent_Light"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="13dp"
+                                android:paddingRight="13dp"
+                                android:layout_marginEnd="10dp"
+                                android:id="@+id/tv_home_songs_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:textColor="@color/background_Light"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_home_songs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/rv_home_songs"
+                                android:layout_alignBottom="@+id/rv_home_songs"
+                                android:layout_alignParentEnd="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="?attr/Boder" />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/top_album_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bg_round_cl"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:textAlignment="viewStart"
+                                fontPath="@string/sans_bold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="2dp"
+                                android:text="@string/new_albums"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="?attr/Titel_1"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/card_home_text"
+                                android:backgroundTint="@color/colorAccent_Light"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="13dp"
+                                android:paddingStart="13dp"
+                                android:id="@+id/tv_home_albums_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:textColor="@color/background_Light"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_home_album_new"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/recyclerView_home_album_new"
+                                android:layout_alignBottom="@+id/recyclerView_home_album_new"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="?attr/Boder" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/top_album_container2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bg_round_cl"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:textAlignment="viewStart"
+                                fontPath="@string/sans_bold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="2dp"
+                                android:text="@string/playlist"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="?attr/Titel_1"
+                                tools:ignore="MissingPrefix" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/card_home_text"
+                                android:backgroundTint="@color/colorAccent_Light"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="13dp"
+                                android:paddingStart="13dp"
+                                android:id="@+id/tv_home_playlist_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:textColor="@color/background_Light"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_home_album2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/recyclerView_home_album2"
+                                android:layout_alignBottom="@+id/recyclerView_home_album2"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="?attr/Boder" />
+                    </LinearLayout>
+
+                    
+
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:id="@+id/adView_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:id="@+id/top_album_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bg_round_cl"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:textAlignment="viewStart"
+                                fontPath="@string/sans_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:textStyle="bold"
+                                android:paddingBottom="2dp"
+                                android:text="@string/albums"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="?attr/Titel_1"
+                                tools:ignore="MissingPrefix" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_home_album"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/recyclerView_home_album"
+                                android:layout_alignBottom="@+id/recyclerView_home_album"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+                            <ProgressBar
+                                android:id="@+id/progressbar_album"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="?attr/Boder" />
+                    </LinearLayout>
+
+                    <include layout="@layout/baner" />
+
+
+                    <LinearLayout
+                        android:id="@+id/recent_albums_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bg_round_cl"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:textAlignment="viewStart"
+                                fontPath="@string/sans_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="5dp"
+                                android:textStyle="bold"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="2dp"
+                                android:text="@string/recently_played"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="?attr/Titel_1"
+                                tools:ignore="MissingPrefix" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_home_recent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@+id/recyclerView_home_recent"
+                                android:layout_alignBottom="@+id/recyclerView_home_recent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:backgroundTint="?attr/BackgroundColor"
+                                android:background="@drawable/bg_gradient_white"
+                                tools:ignore="RtlHardcoded" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="?attr/Boder" />
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:id="@+id/adView_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

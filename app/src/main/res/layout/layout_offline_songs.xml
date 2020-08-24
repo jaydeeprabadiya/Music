@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_off_songlist"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <thiva.tamilaudiopro.views.Roundedimageview.RoundedImageView
+                android:id="@+id/iv_off_songlist"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="5dp" />
+
+            <thiva.tamilaudiopro.views.Mini_Equalizer.EqualizerView
+                android:layout_marginEnd="5dp"
+                android:id="@+id/equalizer_view_off"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                app:animDuration="3000"
+                app:foregroundColor="@color/colorAccent_Light" />
+
+
+            <TextView
+                android:id="@+id/tv_off_songlist_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iv_off_songlist"
+                android:layout_alignParentBottom="true"
+                android:background="#EB6B6B6B"
+                android:padding="1dp"
+                android:text="@string/app_name"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                fontPath="@string/sans_bold"
+                android:textColor="#F51A1A1A"
+                tools:ignore="MissingPrefix"
+                android:id="@+id/tv_off_songlist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_off_songlist_art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="?attr/Titel_2"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_off_songlist_option"
+        android:layout_width="30dp"
+        android:layout_height="75dp"
+        android:layout_alignBottom="@+id/ll_songlist"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="3dp"
+        android:tint="?attr/BackgroundTint"
+        android:background="@drawable/bar_selector_white"
+        android:src="@drawable/ic_more_vert_white_24dp"
+        tools:ignore="ContentDescription,UnknownIdInLayout" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/Boder" />
+
+</RelativeLayout>

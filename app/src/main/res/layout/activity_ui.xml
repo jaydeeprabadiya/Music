@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/BackgroundColor"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/BackgroundColor"
+        app:titleTextColor="?attr/BackgroundTint"
+        app:navigationIcon="?attr/icon_a"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                fontPath="@string/sans_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/notifcation"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="?attr/BackgroundTint"
+                tools:ignore="MissingPrefix" />
+
+
+            <LinearLayout
+                android:background="#0513EC04"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llvibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#260458EC"
+                        android:background="@drawable/abs_history_playlist"
+                        android:src="@drawable/ic_notifications_none_black_24dp"
+                        app:tint="#03a9f4"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="@string/enable_push_noti"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/BackgroundTint" />
+
+                    <com.nemosofts.library.SwitchButton.SwitchButton
+                        android:id="@+id/switch_noti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        app:sb_checked="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginStart="10dp"
+                fontPath="@string/sans_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:text="@string/app"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="?attr/BackgroundTint"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="#05FF0267"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:padding="12dp"
+                            android:backgroundTint="#26FF0267"
+                            android:background="@drawable/abs_history_playlist"
+                            android:src="@drawable/ic_brightness"
+                            app:tint="#FF0267"
+                            tools:ignore="ObsoleteLayoutParam" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:text="@string/darkmode"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?attr/BackgroundTint" />
+
+                        <com.nemosofts.library.SwitchButton.SwitchButton
+                            android:id="@+id/switch_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            app:sb_checked="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="#05607D8B"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:padding="12dp"
+                            android:backgroundTint="#26607D8B"
+                            android:background="@drawable/abs_history_playlist"
+                            android:src="@drawable/ic_phone_android_black_24dp"
+                            app:tint="#607d8b"
+                            tools:ignore="ObsoleteLayoutParam" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:text="@string/statusBar"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?attr/BackgroundTint" />
+
+                        <com.nemosofts.library.SwitchButton.SwitchButton
+                            android:id="@+id/switch_apps_full"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            app:sb_checked="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="#05009CF3"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:padding="12dp"
+                            android:backgroundTint="#26009CF3"
+                            android:background="@drawable/abs_history_playlist"
+                            android:src="@drawable/ic_color_lens_black_24dp"
+                            app:tint="#B3009CF3"
+                            tools:ignore="ObsoleteLayoutParam" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:text="@string/toolbar_color"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?attr/BackgroundTint" />
+
+                        <com.nemosofts.library.SwitchButton.SwitchButton
+                            android:id="@+id/switch_as"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            app:sb_checked="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/coler_pik"
+                android:background="#05FF006F"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#26FF006F"
+                        android:background="@drawable/abs_history_playlist"
+                        android:src="@drawable/ic_colorize_black_24dp"
+                        app:tint="#FF006F"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="@string/toolbar_color_set"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/BackgroundTint" />
+
+
+                    <ImageView
+                        android:id="@+id/color"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/round_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        tools:ignore="ContentDescription" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="#05FFBA00"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:padding="12dp"
+                            android:backgroundTint="#26FFBA00"
+                            android:background="@drawable/abs_history_playlist"
+                            android:src="@drawable/ic_menu2"
+                            app:tint="#FFBA00"
+                            tools:ignore="ObsoleteLayoutParam" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_weight="1"
+                            android:text="@string/bottom_navigation_menu"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?attr/BackgroundTint" />
+
+                        <com.nemosofts.library.SwitchButton.SwitchButton
+                            android:id="@+id/bottomnavigationmenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            app:sb_checked="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                fontPath="@string/sans_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:text="@string/home"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="?attr/BackgroundTint"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:id="@+id/switch_album"
+                android:background="#0500FF03"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#2600FF03"
+                        android:background="@drawable/abs_history_playlist"
+                        android:src="@drawable/ic_play_arrow_white_24dp"
+                        app:tint="#4caf50"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="@string/playing_screen"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/BackgroundTint" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#057B1FA2"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#267B1FA2"
+                        android:background="@drawable/abs_history_playlist"
+                        android:src="@drawable/ic_format_color_fill_black_24dp"
+                        app:tint="#7B1FA2"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="@string/songs_color_adapter"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/BackgroundTint" />
+
+                    <com.nemosofts.library.SwitchButton.SwitchButton
+                        android:id="@+id/switch_songs_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        app:sb_checked="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#05EC0C04"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#26EC0C04"
+                        android:background="@drawable/abs_history_playlist"
+                        android:src="@drawable/ic_format_color_fill_black_24dp"
+                        app:tint="#BFEC0C04"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="@string/album_color_adapter"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/BackgroundTint" />
+
+                    <com.nemosofts.library.SwitchButton.SwitchButton
+                        android:id="@+id/switch_album_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        app:sb_checked="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/ui"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

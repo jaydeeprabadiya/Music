@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/BackgroundColor"
+        app:titleTextColor="?attr/BackgroundTint"
+        app:navigationIcon="?attr/icon_a"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="#05EC0C04"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ui"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#26EC0C04"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/ic_settings_white_24dp"
+                        app:tint="#BFEC0C04"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:text="@string/ui"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/BackgroundTint" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#050458EC">
+
+
+                <RelativeLayout
+                    android:id="@+id/privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/a2"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#260458EC"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/policy"
+                        app:tint="#03a9f4"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@id/a2"
+                        android:shadowColor="?attr/BackgroundTint"
+                        android:text="@string/privacy"
+                        android:textColor="?attr/BackgroundTint"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#05FF0000">
+
+
+                <RelativeLayout
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/a22"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#26FF0000"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/about"
+                        app:tint="#f44336"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@id/a22"
+                        android:shadowColor="?attr/BackgroundTint"
+                        android:text="@string/menu_about"
+                        android:textColor="?attr/BackgroundTint"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0500FF03">
+
+                <RelativeLayout
+                    android:id="@+id/re"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/hjhgjghjgh"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#2600FF03"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/ic_star_white_24dp"
+                        app:tint="#4caf50"/>
+
+                    <LinearLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/hjhgjghjgh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:shadowColor="?attr/BackgroundTint"
+                            android:text="@string/rate_app"
+                            android:textColor="?attr/BackgroundTint"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/like_it"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?Titel_2"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#05607D8B">
+
+
+                <RelativeLayout
+                    android:id="@+id/version"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground">
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/a225"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#26607D8B"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/version"
+                        app:tint="#607d8b"/>
+
+
+                    <LinearLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/a225"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginStart="7dp"
+                            android:shadowColor="?attr/BackgroundTint"
+                            android:text="@string/version"
+                            android:textColor="?attr/BackgroundTint"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/v2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/version"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?Titel_2"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:background="#05FC3A00">
+
+
+                <RelativeLayout
+                    android:id="@+id/co"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/a228"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#26FC3A00"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/ic_call_black_24dp"
+                        app:tint="#BFFC3A00"/>
+
+
+                    <LinearLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/a228"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginStart="7dp"
+                            android:shadowColor="?attr/BackgroundTint"
+                            android:text="@string/contactus"
+                            android:textColor="?attr/BackgroundTint"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/need_help"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?Titel_2"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#057B1FA2">
+
+
+                <RelativeLayout
+                    android:id="@+id/feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/a2281"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:backgroundTint="#267B1FA2"
+                        android:background="@drawable/abs_top_tracks_playlist"
+                        android:src="@drawable/feedback"
+                        app:tint="#7B1FA2"/>
+
+
+                    <LinearLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/a2281"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginStart="7dp"
+                            android:shadowColor="?attr/BackgroundTint"
+                            android:text="@string/open_source"
+                            android:textColor="?attr/BackgroundTint"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/licences"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="?Titel_2"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/made_with_in_srilanka"
+            android:textColor="#607d8b"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

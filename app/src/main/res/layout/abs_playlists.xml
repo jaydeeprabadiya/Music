@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/abs"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/abs_history_playlist"
+                android:backgroundTint="#260458EC"
+                app:srcCompat="@drawable/ic_search_white_24dp"
+                app:tint="#03a9f4"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:gravity="center"
+                android:text="@string/search"
+                android:textColor="?attr/Titel_1"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/abs_history_playlist"
+                android:backgroundTint="#26FF0000"
+                app:srcCompat="@drawable/ic_queue_music_white_24dp"
+                app:tint="#f44336"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:gravity="center"
+                android:text="@string/Recent"
+                android:textColor="?attr/Titel_1"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/most"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:backgroundTint="#2600FF03"
+                android:background="@drawable/abs_history_playlist"
+                app:srcCompat="@drawable/ic_favorite_border_white2_24dp"
+                app:tint="#4caf50"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:gravity="center"
+                android:text="@string/favourite"
+                android:textColor="?attr/Titel_1"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:backgroundTint="#26607D8B"
+                android:background="@drawable/abs_history_playlist"
+                app:srcCompat="@drawable/ic_notification"
+                app:tint="#607d8b"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:gravity="center"
+                android:text="@string/Latest"
+                android:textColor="?attr/Titel_1"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:backgroundTint="#26FC3A00"
+                android:background="@drawable/abs_history_playlist"
+                app:srcCompat="@drawable/ic_timer_white_24dp"
+                app:tint="#BFFC3A00"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:gravity="center"
+                android:text="@string/timer"
+                android:textColor="?attr/Titel_1"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/textView_stoptimer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/imageView_timer_myfm"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:paddingTop="8dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="12sp"
+                tools:ignore="ObsoleteLayoutParam" />
+
+            <TextView
+                android:id="@+id/textView_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView_timer_myfm"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_time"
+                android:padding="5dp"
+                android:visibility="gone"
+                tools:ignore="ObsoleteLayoutParam,SmallSp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

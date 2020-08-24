@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pager"
+    android:background="?attr/BackgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/player_album_art_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <thiva.tamilaudiopro.views.Roundedimageview.RoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+
+                <RelativeLayout
+                    android:id="@+id/background"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="3dp"
+                        fontPath="@string/sans_bold"
+                        tools:ignore="MissingPrefix"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_vp_play"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:translationZ="1dp"
+                        android:background="@drawable/color_circle_gradient"
+                        android:src="@drawable/selector_play"
+                        android:layout_centerInParent="true"
+                        tools:ignore="ContentDescription" />
+                    <ProgressBar
+                        android:id="@+id/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

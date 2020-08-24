@@ -1,0 +1,253 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background_Light</item>
+        <item name="colorPrimaryDark">@color/background_Light</item>
+        <item name="colorAccent">@color/colorAccent_Light</item>
+
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="icon_a">@drawable/ic_keyboard_backspace_black_24dp2</item>
+        <item name="Boder">@color/Boder_Light</item>
+        <item name="Titel_1">@color/Titele_A_Light</item>
+        <item name="Titel_2">@color/Titele_AA_Light</item>
+        <item name="BackgroundColor_S">@color/Background_Light_S</item>
+        <item name="BackgroundColor">@color/background_Light</item>
+        <item name="BackgroundTint">@color/background_Night</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/background_Night</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background_Night</item>
+        <item name="colorPrimaryDark">@color/background_Night</item>
+        <item name="colorAccent">@color/colorAccent_Night</item>
+
+        <item name="icon_a">@drawable/ic_keyboard_backspace_black_24dp</item>
+        <item name="Boder">@color/Boder_Night</item>
+        <item name="Titel_1">@color/Titele_A_Night</item>
+        <item name="Titel_2">@color/Titele_AA_Night</item>
+        <item name="BackgroundColor_S">@color/Background_Night_S</item>
+        <item name="BackgroundColor">@color/background_Night</item>
+        <item name="BackgroundTint">@color/background_Light</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/amazon</item>
+        <item name="fontFamily">@font/amazon</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/black_window</item>
+        <item name="cardViewStyle">@style/DarkCardView</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogDarkTheme</item>
+    </style>
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/amazon</item>
+        <item name="fontFamily">@font/amazon</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogLightTheme</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent_Light</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+<style name="WindowAnimationTransition">
+    <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+</style>
+    <style name="AppBottomSheetDialogLightTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalLightStyle</item>
+    </style>
+    <style name="AppModalLightStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_bottom_shit_light</item>
+    </style>
+    <style name="DarkCardView" parent="CardView.Dark">
+        <item name="cardBackgroundColor">@color/black_window</item>
+    </style>
+    <style name="AppBottomSheetDialogDarkTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalDarkStyle</item>
+    </style>
+    <style name="AppModalDarkStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_bottom_shit_dark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MySeekBarTheme" parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/colorAccent_Light</item>
+    </style>
+
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">#59FF8400</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="RatingBar_white" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">#59FF8400</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">#E62E2F</item>
+    </style>
+
+    <style name="CircularProgress3" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+
+    <style name="TextViewNormal" parent="">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="My_Switch" parent="@style/Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textColorPrimaryDisableOnly">#ab0003</item>
+        <item name="android:colorControlActivated">#bf0003</item>
+        <item name="android:colorForeground">#000000</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+
+    <style name="CircularProgress2" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="RatingBar_black" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="RatingBar_normal" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="ThemeDialog" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle_Light</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle_Light</item>
+    </style>
+
+    <style name="ThemeDialog2" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_dialog</item>
+    </style>
+
+    <style name="Theme.MiniPlayer" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="NegativeButtonStyle_Light" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="PositiveButtonStyle_Light" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="TextLabel" parent="AppTheme">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/white50</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="TextLabel_GREY" parent="AppTheme">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/black80</item>
+        <item name="colorAccent">@color/black80</item>
+    </style>
+
+    <style name="Toolbar48" parent="Toolbar">
+        <item name="android:layout_height">40dp</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="titleMarginStart">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="popupTheme">?popupTheme</item>
+        <item name="android:transitionName" tools:ignore="NewApi">toolbar</item>
+
+        <item name="layout_collapseMode">pin</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">#62ff00</item>
+    </style>
+
+    <style name="YOURSTYLE" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/background_Light</item>
+        <item name="android:itemBackground">@color/colorAccent_Light</item>
+    </style>
+
+    <style name="ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/action_button_height</item>
+        <item name="android:minWidth">@dimen/action_button_min_width</item>
+        <item name="android:paddingLeft">@dimen/action_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/action_button_padding_horizontal</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textSize">@dimen/action_button_text_size</item>
+    </style>
+
+    <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/btn_rounded_corner</item>
+    </style>
+    <color name="white50">#50ffffff</color>
+</resources>

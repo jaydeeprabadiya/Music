@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="thiva.tamilaudiopro.Activity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".FirebaseSignUpActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ProfileActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".ProfileEditActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SongByCatActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SongByServerPlaylistActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SongByMyPlaylistActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SongByOfflineActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SongByOFFPlaylistActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".Add2OfflinePlaylistActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".NotificationActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".ReportActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SuggestionActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SettingActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".UiActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".AboutActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".OfflineMusicActivity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".SelectSongActivity"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".EqualizerActivity"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".MiniPlayer"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/Theme.MiniPlayer"
+            android:windowSoftInputMode="adjustPan|adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.APP_MUSIC" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".PlayerService"
+            android:exported="false" />
+
+        <receiver android:name="thiva.tamilaudiopro.Receiver.MyReceiver" />
+
+        <service
+            android:name="thiva.tamilaudiopro.Utils.NotificationExtenderExample"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".DownloadService"
+            android:exported="false" />
+
+        <receiver android:name="thiva.tamilaudiopro.Utils.MediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:tint="?Titel_2"
+            android:id="@+id/ima"
+            android:src="@drawable/ic_bookmark_music_white_24dp"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:gravity="center|left"
+            android:textStyle="bold"
+            android:id="@+id/textView_playlist_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/ima"
+            android:text="@string/app_name"
+            android:textColor="?Titel_1"
+            android:textSize="20dp"
+            tools:ignore="RtlHardcoded,SpUsage" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="?attr/Boder" />
+
+</LinearLayout>
+

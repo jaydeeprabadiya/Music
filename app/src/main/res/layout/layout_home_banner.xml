@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <thiva.tamilaudiopro.views.Roundedimageview.RoundedImageView
+        android:id="@+id/iv_home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="5dp"/>
+
+    <View
+        android:id="@+id/view_home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/tv_home_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_play_banner"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/app_name"/>
+
+    <ImageView
+        android:id="@+id/iv_play_banner"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/play_now"
+        android:src="@drawable/ic_play_arrow_white_24dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_home_banner_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_home_banner_total"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/iv_play_banner"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:text="@string/app_name"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tv_home_banner_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="9dp"
+        android:layout_toEndOf="@+id/iv_play_banner"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:text="@string/app_name"
+        tools:ignore="RelativeOverlap,SmallSp" />
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

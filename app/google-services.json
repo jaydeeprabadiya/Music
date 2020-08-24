@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "921950160222",
+    "firebase_url": "https://dramamusic-34d7a.firebaseio.com",
+    "project_id": "dramamusic-34d7a",
+    "storage_bucket": "dramamusic-34d7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921950160222:android:b1088aaf273621eb3d3bcf",
+        "android_client_info": {
+          "package_name": "com.dramamusic.onlinemusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921950160222-lo0e1bepakp9s2ug07i2v2h0psdnfan7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dramamusic.onlinemusic",
+            "certificate_hash": "e26eea30b16a868aadbaed2535e29b1597650763"
+          }
+        },
+        {
+          "client_id": "921950160222-sm8hsc5d0i46299vkeh72r9kjh0dc9lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGeGLaR4HKZYmRqLm_KP88aafWIj6Eu50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921950160222-sm8hsc5d0i46299vkeh72r9kjh0dc9lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

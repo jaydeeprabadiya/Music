@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EqualizerView">
+        <attr name="foregroundColor" format="integer" />
+        <attr name="animDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="VerticalSeekBar">
+        <attr name="seekBarRotation">
+            <!-- Clock wise - 90 deg; top = min, bottom = max -->
+            <enum name="CW90" value="90" />
+            <!-- Clock wise - 270 deg; bottom = min, top = max -->
+            <enum name="CW270" value="270" />
+        </attr>
+    </declare-styleable>
+
+    <attr name="numberPickerStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+        <attr name="np_width" format="dimension" />
+        <attr name="np_height" format="dimension" />
+        <attr name="np_divider" format="reference" />
+        <attr name="np_dividerColor" format="color" />
+        <attr name="np_dividerDistance" format="dimension" />
+        <attr name="np_dividerThickness" format="dimension" />
+        <attr name="np_fadingEdgeEnabled" format="boolean" />
+        <attr name="np_fadingEdgeStrength" format="float" />
+        <attr name="np_formatter" format="string" />
+        <attr name="np_hideWheelUntilFocused" format="boolean" />
+        <attr name="np_lineSpacingMultiplier" format="float" />
+        <attr name="np_max" format="integer" />
+        <attr name="np_maxFlingVelocityCoefficient" format="integer" />
+        <attr name="np_min" format="integer" />
+        <attr name="np_order" format="enum">
+            <enum name="ascending" value="0" />
+            <enum name="descending" value="1" />
+        </attr>
+        <attr name="np_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="np_scrollerEnabled" format="boolean" />
+        <attr name="np_selectedTextAlign" format="enum">
+            <enum name="selectedTextAlignRight" value="0" />
+            <enum name="selectedTextAlignCenter" value="1" />
+            <enum name="selectedTextAlignLeft" value="2" />
+        </attr>
+        <attr name="np_selectedTextColor" format="color" />
+        <attr name="np_selectedTextSize" format="dimension" />
+        <attr name="np_selectedTextStrikeThru" format="boolean" />
+        <attr name="np_selectedTextUnderline" format="boolean" />
+        <attr name="np_textAlign" format="enum">
+            <enum name="textAlignRight" value="0" />
+            <enum name="textAlignCenter" value="1" />
+            <enum name="textAlignLeft" value="2" />
+        </attr>
+        <attr name="np_textColor" format="color" />
+        <attr name="np_textSize" format="dimension" />
+        <attr name="np_textStrikeThru" format="boolean" />
+        <attr name="np_textUnderline" format="boolean" />
+        <attr name="np_typeface" format="string" />
+        <attr name="np_value" format="integer" />
+        <attr name="np_wheelItemCount" format="integer" />
+        <attr name="np_wrapSelectorWheel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="color_tick" format="color"/>
+        <attr name="color_checked" format="color"/>
+        <attr name="color_unchecked" format="color"/>
+        <attr name="color_unchecked_stroke" format="color"/>
+    </declare-styleable>
+
+    <attr name="primaryTitleColor" format="color"/>
+    <attr name="primaryDescriptionColor" format="color"/>
+    <attr name="primaryDateColor" format="color"/>
+    <attr name="primaryBackgroundColor" format="color"/>
+    <attr name="primaryCardBackgroundColor" format="color"/>
+    <attr name="iconBookmark" format="integer"/>
+
+    <declare-styleable name="ScrimInsetsView">
+        <attr name="insetForeground_ui" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="SwipeRefreshLayout">
+        <attr name="direction">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="both" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDividerWidth" format="dimension" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTextStyle">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTextSelectedStyle">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTextAlpha" format="float" />
+        <attr name="pstsTextSelectedAlpha" format="float" />
+    </declare-styleable>
+    <bool name="fitsSystemWindows">false</bool>
+    <dimen name="statusBarHeight">0dp</dimen>
+    <dimen name="space">0dp</dimen>
+    <color name="inset">#0000</color>
+
+    <style name="statusBarVisibility">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- SlidingUpPanelLayout -->
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="umanoPanelHeight" format="dimension" />
+        <attr name="umanoShadowHeight" format="dimension" />
+        <attr name="umanoParalaxOffset" format="dimension" />
+        <attr name="umanoFadeColor" format="color" />
+        <attr name="umanoFlingVelocity" format="integer" />
+        <attr name="umanoDragView" format="reference" />
+        <attr name="umanoOverlay" format="boolean" />
+        <attr name="umanoClipPanel" format="boolean" />
+        <attr name="umanoAnchorPoint" format="float" />
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <!-- CircleImageView -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- Custom SeekBar -->
+    <declare-styleable name="CustomAttributes">
+
+        <!-- in progress view indicate max value of progress -->
+        <attr name="max" format="integer" />
+        <!-- in progress view indicate min value of progress -->
+        <attr name="min" format="integer" />
+    </declare-styleable>
+
+    <!-- PlayPause -->
+    <declare-styleable name="PlayPause">
+        <attr name="isCircleDraw" format="boolean" />
+    </declare-styleable>
+
+
+    <attr name="roundSelector" format="reference" />
+    <attr name="rectSelector" format="reference" />
+    <attr name="rectSelectorStrong" format="reference" />
+
+
+    <declare-styleable name="ShimmerFrameLayout">
+        <attr name="shimmer_clip_to_children" format="boolean"/>
+        <attr name="shimmer_colored" format="boolean"/>
+        <attr name="shimmer_base_color" format="color"/>
+        <attr name="shimmer_highlight_color" format="color"/>
+        <attr name="shimmer_base_alpha" format="float"/>
+        <attr name="shimmer_highlight_alpha" format="float"/>
+        <attr name="shimmer_auto_start" format="boolean"/>
+        <attr name="shimmer_duration" format="integer"/>
+        <attr name="shimmer_repeat_count" format="integer"/>
+        <attr name="shimmer_repeat_delay" format="integer"/>
+        <attr name="shimmer_repeat_mode" format="enum">
+            <enum name="restart" value="1"/>
+            <enum name="reverse" value="2"/>
+        </attr>
+        <attr name="shimmer_direction" format="enum">
+            <enum name="left_to_right" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="bottom_to_top" value="3"/>
+        </attr>
+        <attr name="shimmer_dropoff" format="float"/>
+        <attr name="shimmer_fixed_width" format="dimension"/>
+        <attr name="shimmer_fixed_height" format="dimension"/>
+        <attr name="shimmer_intensity" format="float"/>
+        <attr name="shimmer_width_ratio" format="float"/>
+        <attr name="shimmer_height_ratio" format="float"/>
+        <attr name="shimmer_shape" format="enum">
+            <enum name="linear" value="0"/>
+            <enum name="radial" value="1"/>
+        </attr>
+        <attr name="shimmer_tilt" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="BubbleToggleView">
+        <attr name="bt_icon" format="reference" />
+        <attr name="bt_iconWidth" format="dimension" />
+        <attr name="bt_iconHeight" format="dimension" />
+        <attr name="bt_shape" format="reference" />
+        <attr name="bt_shapeColor" format="color" />
+        <attr name="bt_showShapeAlways" format="boolean" />
+        <attr name="bt_title" format="string" />
+        <attr name="bt_titleSize" format="dimension" />
+        <attr name="bt_colorActive" format="color" />
+        <attr name="bt_colorInactive" format="color" />
+        <attr name="bt_active" format="boolean" />
+        <attr name="bt_duration" format="integer" />
+        <attr name="bt_padding" format="dimension" />
+        <attr name="bt_titlePadding" format="dimension" />
+        <attr name="bt_badgeTextSize" format="dimension" />
+        <attr name="bt_badgeBackgroundColor" format="color" />
+        <attr name="bt_badgeTextColor" format="color" />
+        <attr name="bt_badgeText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="BubbleNavigationConstraintView">
+        <attr name="bnc_mode">
+            <enum name="spread" value="0" />
+            <enum name="inside" value="1" />
+            <enum name="packed" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="civ_border" format="boolean" />
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_shadow" format="boolean" />
+        <attr name="civ_shadow_color" format="color" />
+        <attr name="civ_shadow_radius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="sb_shadow_radius" format="reference|dimension"/>
+        <attr name="sb_shadow_offset" format="reference|dimension"/>
+        <attr name="sb_shadow_color" format="reference|color"/>
+        <attr name="sb_uncheck_color" format="reference|color"/>
+        <attr name="sb_checked_color" format="reference|color"/>
+
+        <attr name="sb_border_width" format="reference|dimension"/>
+        <attr name="sb_checkline_color" format="reference|color"/>
+        <attr name="sb_checkline_width" format="reference|dimension"/>
+        <attr name="sb_uncheckcircle_color" format="reference|color"/>
+        <attr name="sb_uncheckcircle_width" format="reference|dimension"/>
+        <attr name="sb_uncheckcircle_radius" format="reference|dimension"/>
+
+        <attr name="sb_checked" format="reference|boolean"/>
+        <attr name="sb_shadow_effect" format="reference|boolean"/>
+        <attr name="sb_effect_duration" format="reference|integer"/>
+        <attr name="sb_button_color" format="reference|color"/>
+        <attr name="sb_show_indicator" format="reference|boolean"/>
+        <attr name="sb_background" format="reference|color"/>
+        <attr name="sb_enable_effect" format="reference|boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_mutate_background" format="boolean" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <attr name="BackgroundColor" format="color"/>
+    <attr name="BackgroundColor_S" format="color"/>
+    <attr name="BackgroundTint" format="color"/>
+    <attr name="Boder" format="color"/>
+    <attr name="Titel_1" format="color"/>
+    <attr name="Titel_2" format="color"/>
+    <attr name="icon_a" format="integer"/>
+    <attr name="menu_ican" format="integer"/>
+
+    <array name="default_colors">
+        <item>@color/color1</item>
+        <item>@color/color2</item>
+        <item>@color/color3</item>
+        <item>@color/color4</item>
+        <item>@color/color5</item>
+
+        <item>@color/color6</item>
+        <item>@color/color7</item>
+        <item>@color/color8</item>
+        <item>@color/color9</item>
+        <item>@color/color10</item>
+
+        <item>@color/color11</item>
+        <item>@color/color12</item>
+        <item>@color/color13</item>
+        <item>@color/color14</item>
+        <item>@color/color15</item>
+
+    </array>
+</resources>

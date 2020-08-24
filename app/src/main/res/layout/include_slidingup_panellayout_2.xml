@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="@dimen/bottom_sheet_peek_1_height"
+        sothree:umanoParallaxOffset="0dp"
+        sothree:umanoShadowHeight="4dp">
+
+        <!-- MAIN CONTENT -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:translationZ="0dp"
+                android:id="@+id/toolbar_offline_music"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/BackgroundColor"
+                style="@style/Toolbar48"
+                app:navigationIcon="?attr/icon_a"
+                app:titleTextColor="?attr/BackgroundTint" />
+
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar_offline_music"
+                android:layout_marginBottom="@dimen/bottom_sheet_peek_1_height"/>
+
+
+            <FrameLayout
+                android:id="@+id/content_frame1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar_offline_music"
+                android:layout_marginBottom="@dimen/bottom_sheet_peek_1_height"/>
+
+
+
+        </RelativeLayout>
+
+        <!-- SLIDING LAYOUT -->
+
+        <include
+            layout="@layout/include_slidingpanel_childtwo_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <thiva.tamilaudiopro.Navigation.BubbleNavigationLinearView
+        android:visibility="visible"
+        android:id="@+id/bottom_navigation_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/BackgroundColor"
+        android:elevation="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <thiva.tamilaudiopro.Navigation.BubbleToggleView
+            android:id="@+id/l_item_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/red_active"
+            app:bt_colorInactive="@color/red_inactive"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_shape="@drawable/transition_background_drawable_home"
+            app:bt_title="@string/home" />
+
+        <thiva.tamilaudiopro.Navigation.BubbleToggleView
+            android:id="@+id/l_item_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/blue_active"
+            app:bt_colorInactive="@color/blue_inactive"
+            app:bt_icon="@drawable/ic_folder_white_24dp"
+            app:bt_shape="@drawable/transition_background_drawable_search"
+            app:bt_title="@string/categories" />
+
+        <thiva.tamilaudiopro.Navigation.BubbleToggleView
+            android:id="@+id/l_item_profile_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/blue_grey_active"
+            app:bt_colorInactive="@color/blue_grey_inactive"
+            app:bt_icon="@drawable/ic_artist_white_24dp"
+            app:bt_shape="@drawable/transition_background_drawable_like"
+            app:bt_title="@string/artist" />
+
+        <thiva.tamilaudiopro.Navigation.BubbleToggleView
+            android:id="@+id/l_item_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/green_active"
+            app:bt_colorInactive="@color/green_inactive"
+            app:bt_icon="@drawable/ic_album_white_24dp"
+            app:bt_shape="@drawable/transition_background_drawable_list"
+            app:bt_title="@string/albums" />
+
+        <thiva.tamilaudiopro.Navigation.BubbleToggleView
+            android:id="@+id/l_item_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/purple_active"
+            app:bt_colorInactive="@color/purple_inactive"
+            app:bt_icon="@drawable/ic_playlist_add_white_24dp"
+            app:bt_shape="@drawable/transition_background_drawable_person"
+            app:bt_title="@string/playlist" />
+    </thiva.tamilaudiopro.Navigation.BubbleNavigationLinearView>
+
+</LinearLayout>

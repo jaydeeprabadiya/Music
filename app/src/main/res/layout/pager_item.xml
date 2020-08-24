@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="315dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="7dp"
+    android:background="@drawable/card_all"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="182dp">
+
+        <thiva.tamilaudiopro.views.Roundedimageview.RoundedImageView
+            app:riv_corner_radius="5dp"
+            android:src="#BBDEFB"
+            android:layout_margin="10dp"
+            android:id="@+id/imageView_latest_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:background="@drawable/background_image4"
+            android:layout_alignEnd="@+id/imageView_latest_list"
+            android:layout_alignStart="@+id/imageView_latest_list"
+            android:layout_alignBottom="@+id/imageView_latest_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/todo" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_margin="16dp"
+            android:id="@+id/play_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView_latest_list"
+            android:layout_alignBottom="@+id/imageView_latest_list"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#81000000"
+            android:background="@drawable/color_circle_gradient"
+            android:padding="12dp"
+            android:tint="#fff"
+            app:srcCompat="@drawable/ic_play_arrow_white_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <thiva.tamilaudiopro.views.Mini_Equalizer.EqualizerView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/equalizer_view2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            custom:animDuration="3000"
+            custom:foregroundColor="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textColor="?attr/Titel_2"
+        tools:ignore="MissingPrefix"
+        tools:text="My top tracks" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_latest_list"
+        fontPath="@string/sans_bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="?attr/Titel_1"
+        tools:ignore="MissingPrefix"
+        tools:text="My top tracks" />
+
+</LinearLayout>

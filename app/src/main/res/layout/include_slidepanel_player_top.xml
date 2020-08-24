@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_sheet_peek_1_height"
+        android:background="?BackgroundColor"
+        android:id="@+id/rl_min_header"
+        tools:ignore="UnusedAttribute">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="0dp"
+        android:paddingEnd="8dp">
+
+
+        <ImageView
+            android:id="@+id/img_bottom_slideone2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_keyboard_arrow_up_24dp2"
+            app:tint="?BackgroundTint"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_min_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextViewNormal"
+            android:textColor="?Titel_1"
+            tools:text="@tools:sample/lorem/random" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/actionPrevious"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:padding="6dp"
+            android:src="@drawable/ic_skip_previous_white_24dp"
+            android:tint="?attr/BackgroundTint" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.progressindicator.ProgressIndicator
+                android:id="@+id/seekbar_min"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:circularRadius="16dp"
+                app:indicatorColor="?BackgroundTint"
+                app:indicatorType="circular"
+                app:indicatorWidth="2dp"
+                app:linearSeamless="true"
+                tools:progress="0" />
+
+            <ImageView
+                android:id="@+id/iv_min_play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_play_arrow_white_24dp3"
+                android:tint="?attr/BackgroundTint"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/actionNext"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:tint="?attr/BackgroundTint"
+            android:padding="6dp"
+            android:src="@drawable/ic_skip_next_white_24dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/seekbar_min2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/color_progress_home"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp" />
+
+
+</RelativeLayout>

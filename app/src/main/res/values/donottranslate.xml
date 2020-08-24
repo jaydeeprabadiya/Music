@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sans_bold" translatable="false">fonts/circular_std_black.otf</string>
+    <string name="sans_regular" translatable="false">fonts/circular_std_book.otf</string>
+</resources>
